@@ -34,6 +34,7 @@ namespace Whisper
 
         [Tooltip("Force output text to English translation. Improves translation quality.")]
         public bool translateToEnglish;
+        public bool translateToChinese;
 
         [Header("Advanced settings")] 
         [SerializeField]
@@ -291,7 +292,7 @@ namespace Whisper
         private void UpdateParams()
         {
             _params.Language = language;
-            _params.Translate = translateToEnglish;
+            _params.Translate = translateToChinese;
             _params.NoContext = noContext;
             _params.SingleSegment = singleSegment;
             _params.SpeedUp = speedUp;
